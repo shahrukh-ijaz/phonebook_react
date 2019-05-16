@@ -4,11 +4,14 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './privateRoute';
 import LoginPage from '../components/loginPage';
 import RegisterPage from '../components/registerPage';
 import DashboardPage from '../components/dashboardPage';
+import Profile from '../components/profile';
+import Logout from '../components/logout'
+import AddContact from '../components/AddContact'
 
 class App extends Component {
   render() {
@@ -17,9 +20,11 @@ class App extends Component {
         <div>
           <Switch>
             <Route path='/' exact component={LoginPage} />
-            <Route path='/login' component={LoginPage} />
             <Route path='/register' component={RegisterPage} />
-            <PrivateRoute path='/dashboard' component={DashboardPage} />
+            <Route path='/profile' component={Profile} />
+            <Route path='/logout' component={Logout} />
+            <Route path='/add_contact' component={AddContact} />
+            <PrivateRoute path='/dashboard'  component={DashboardPage} />
           </Switch>
         </div>
       </BrowserRouter>
