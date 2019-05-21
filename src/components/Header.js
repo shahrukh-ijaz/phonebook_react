@@ -3,8 +3,7 @@ import "../App.css";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
-class Header extends Component {
-  render() {
+function Header() {
     return (
       <div className="header">
         <Navbar
@@ -36,6 +35,5 @@ class Header extends Component {
         </Navbar>
       </div>
     );
-  }
 }
 export default Header;

@@ -7,8 +7,12 @@ import { Jumbotron } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
 class LoginPage extends Component {
+  state = {
+    message: "Enter credentials to login"
+  };
   onHandleLogin = event => {
     event.preventDefault();
     let username = event.target.username.value;
@@ -20,6 +24,7 @@ class LoginPage extends Component {
     };
 
     this.props.loginUser(data);
+    this.setState({message: "logged in!"})
   };
 
   render() {
@@ -64,6 +69,9 @@ class LoginPage extends Component {
               <Form.Label label=" Don't have account? " />
             </Form.Group>
             Don't have account? <Link to="register">Register here</Link>
+            <Alert variant="info"><b>Response:</b>&nbsp;&nbsp;&nbsp;{this.state.message}</Alert>
+
+
           </Form>
         </div>
       </div>
