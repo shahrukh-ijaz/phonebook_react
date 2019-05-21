@@ -7,8 +7,8 @@ import store from "./configureStore.js";
 import App from "./container/App";
 
 ReactDOM.render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	document.getElementById("root")
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
 );
