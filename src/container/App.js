@@ -5,7 +5,6 @@ import {
   Switch
 } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import PrivateRoute from './privateRoute';
 import LoginPage from '../components/loginPage';
 import RegisterPage from '../components/registerPage';
 import DashboardPage from '../components/dashboardPage';
@@ -24,7 +23,7 @@ class App extends Component {
             <Route path='/profile' component={Profile} />
             <Route path='/logout' component={Logout} />
             <Route path='/add_contact' component={AddContact} />
-            <PrivateRoute path='/dashboard'  component={DashboardPage} />
+            <Route path='/dashboard' component={DashboardPage} />
           </Switch>
         </div>
       </BrowserRouter>

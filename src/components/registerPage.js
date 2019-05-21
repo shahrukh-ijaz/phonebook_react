@@ -8,9 +8,13 @@ import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import {Link} from "react-router-dom";
+import Alert from "react-bootstrap/Alert";
 
 
 class RegisterPage extends Component {
+  state = {
+    message: "Enter Details and click register button"
+  };
   onHandleRegistration = (event) => {
     event.preventDefault();
 
@@ -23,6 +27,7 @@ class RegisterPage extends Component {
       username, email, password, first_name, last_name
     };
     this.props.registerUser(data);
+    this.setState({message: "Account Created!"})
   };
 
   render() {
@@ -75,7 +80,9 @@ class RegisterPage extends Component {
                   <Form.Label label=" Don't have account? "/>
                 </Form.Group>
                 Do you have account? <Link to="/">Login here</Link>
-              </Form>;
+                <Alert variant="info"><b>Response:</b>&nbsp;&nbsp;&nbsp;{this.state.message}</Alert>
+              </Form>
+
             </div>
           </div>
         </div>
