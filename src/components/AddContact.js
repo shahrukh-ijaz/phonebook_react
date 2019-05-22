@@ -28,7 +28,7 @@ class AddContact extends Component {
         <Header />
         <h2 className="text-center text-danger">Add Contact Form</h2>
         <Form onSubmit={this.onHandleAddContact}>
-          <Form.Group controlId="formBasicFirstname">
+          <Form.Group controlId="first_name">
             <Form.Label>Firstname</Form.Label>
             <Form.Control
               type="text"
@@ -37,7 +37,7 @@ class AddContact extends Component {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasicLastname">
+          <Form.Group controlId="last_name">
             <Form.Label>Lastname</Form.Label>
             <Form.Control
               type="text"
@@ -45,12 +45,12 @@ class AddContact extends Component {
               name="last_name"
             />
           </Form.Group>
-          <Form.Group controlId="formBasicNote">
+          <Form.Group controlId="note">
             <Form.Label>Note</Form.Label>
             <Form.Control type="text" placeholder="Enter Note" name="note" />
           </Form.Group>
 
-          <Form.Group controlId="formBasicDob">
+          <Form.Group controlId="dob">
             <Form.Label>DOB</Form.Label>
             <Form.Control type="date" placeholder="Enter DOB" name="dob" />
           </Form.Group>

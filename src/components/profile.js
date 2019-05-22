@@ -19,7 +19,8 @@ class Profile extends Component {
   render() {
     return (
       <div className="header">
-        <Header />
+        <Header/>
+
         <hr />
         <h2 className="text-center">Profile Details</h2>
         <hr />

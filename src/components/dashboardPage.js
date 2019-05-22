@@ -17,13 +17,13 @@ class DashboardPage extends Component {
   }
   render() {
     if (this.state.loading) {
-      return <div>{localStorage.getItem("token")}</div>;
+      return <div> </div>;
     }
     return (
       <div className="header">
         <Header />
         <div className="body_div">
-          <a href="/add_contact">+Add Contact</a>
+          <a id="addContact_link" href="/add_contact">+Add Contact</a>
           <Table striped bordered>
             <thead>
               <tr>
