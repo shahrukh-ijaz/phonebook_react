@@ -14,3 +14,10 @@ Before using this project please make sure you get the server side running which
 
 ### Real World Project
 I implemented real world project using this architecture which could be found [here](https://github.com/zafar-saleem/timeoff-app)
+
+
+##CYPress Testing
+run the server first by <br>
+`npm start`<br>
+after that run this command<br>
+`npm run cypress:open`
