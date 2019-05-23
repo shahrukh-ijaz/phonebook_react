@@ -28,7 +28,9 @@
     "serve": "live-server public/",
     "eject": "react-scripts eject",
     "dev-server": "webpack-dev-server",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cy:record": "cypress run --env RECORD=1",
+    "cy:run": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
