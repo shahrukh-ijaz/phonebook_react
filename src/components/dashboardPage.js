@@ -39,7 +39,7 @@ class DashboardPage extends Component {
               {this.state.contacts.map((contact, count) => (
                 <tr>
                   <td>{count + 1}</td>
-                  <td>{contact.first_name}</td>
+                  <td className="td_first_name">{contact.first_name}</td>
                   <td>{contact.last_name}</td>
                   <td>{contact.dob}</td>
                   <td>{contact.note}</td>

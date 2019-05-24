@@ -80,7 +80,7 @@ class RegisterPage extends Component {
                   <Form.Label label=" Don't have account? "/>
                 </Form.Group>
                 Do you have account? <Link to="/">Login here</Link>
-                <Alert variant="info"><b>Response:</b>&nbsp;&nbsp;&nbsp;{this.state.message}</Alert>
+                  <Alert variant="info" className="response">{this.state.message}</Alert>
               </Form>
 
             </div>

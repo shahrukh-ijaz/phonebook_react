@@ -8,10 +8,9 @@ describe('Register Test', function(){
         cy.get('input#username').type('ali123');
         cy.get('input#first_name').type('ali');
         cy.get('input#last_name').type('raza');
-        cy.get('button[type="submit"]').click().then(response=>{
-            expect(true).to.be.true
-        });
-            expect(false).to.be.false
+        cy.get('button[type="submit"]').click();
+
+        cy.get('div').find('.response').should('have.text', 'Account Created!');
 
     })
 });
