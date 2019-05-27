@@ -17,13 +17,13 @@ class DashboardPage extends Component {
   }
   render() {
     if (this.state.loading) {
-      return <div>{localStorage.getItem("token")}</div>;
+      return <div> </div>;
     }
     return (
       <div className="header">
         <Header />
         <div className="body_div">
-          <a href="/add_contact">+Add Contact</a>
+          <a id="addContact_link" href="/add_contact">+Add Contact</a>
           <Table striped bordered>
             <thead>
               <tr>
@@ -39,7 +39,7 @@ class DashboardPage extends Component {
               {this.state.contacts.map((contact, count) => (
                 <tr>
                   <td>{count + 1}</td>
-                  <td>{contact.first_name}</td>
+                  <td className="td_first_name">{contact.first_name}</td>
                   <td>{contact.last_name}</td>
                   <td>{contact.dob}</td>
                   <td>{contact.note}</td>

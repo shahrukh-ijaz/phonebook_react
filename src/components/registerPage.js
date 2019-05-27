@@ -46,29 +46,29 @@ class RegisterPage extends Component {
             <div align="center">
               <Form className="form" onSubmit={this.onHandleRegistration}>
                 <Form.Row>
-                  <Form.Group as={Col} controlId="formGridEmail">
+                  <Form.Group as={Col} controlId="email">
                     <Form.Label>Email</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" name="email"/>
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridPassword">
+                  <Form.Group as={Col} controlId="password">
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" placeholder="Password" name="password"/>
                   </Form.Group>
                 </Form.Row>
 
-                <Form.Group controlId="formGridAddress1">
+                <Form.Group controlId="username">
                   <Form.Label>Username</Form.Label>
                   <Form.Control placeholder="shahrukh123" name="username"/>
                 </Form.Group>
 
                 <Form.Row>
-                  <Form.Group as={Col} controlId="formGridFirstname">
+                  <Form.Group as={Col} controlId="first_name">
                     <Form.Label>Firstname</Form.Label>
                     <Form.Control type="text" placeholder="firstname" name="first_name" />
                   </Form.Group>
 
-                  <Form.Group as={Col} controlId="formGridLastName">
+                  <Form.Group as={Col} controlId="last_name">
                     <Form.Label>Lastname</Form.Label>
                     <Form.Control type="text" placeholder="lastname" name="last_name"/>
                   </Form.Group>
@@ -80,7 +80,7 @@ class RegisterPage extends Component {
                   <Form.Label label=" Don't have account? "/>
                 </Form.Group>
                 Do you have account? <Link to="/">Login here</Link>
-                <Alert variant="info"><b>Response:</b>&nbsp;&nbsp;&nbsp;{this.state.message}</Alert>
+                  <Alert variant="info" className="response">{this.state.message}</Alert>
               </Form>
 
             </div>
